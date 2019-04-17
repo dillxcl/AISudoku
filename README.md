@@ -20,7 +20,19 @@ Here is the CNF file that corresponds to the simple formula discussed above:
            i.e., there are no duplicate copies of a number in a row.
     3. Each column contains every number exactly once,
           i.e., there are no duplicate copies of a number in a column
-          
+      
+ After running the following commands
+ 
+      python sudoku.py -n 3 -i sudoku3_unsat.txt
+      python sudoku.py -n 5 
+      python sudoku.py -n 9 -i sudoku9.txt
+      
+ Your code should quickly generate three files:
+
+      sudoku3_unsat.txt3.cnf
+      5.cnf
+      sudoku9.txt9.cnf
+ 
  
  Part 2 - DPLL SAT Solver by editting DPLLsolver.py
  
@@ -50,4 +62,21 @@ Here is the CNF file that corresponds to the simple formula discussed above:
           if solve(VARS, F + {x}) isn't the empty clause, return solve(VARS, F + {x}) // works to have +x
           else return solve(VARS, F + {-x}) // check -x
           
-    All command are in the command.txt to run the program in terminal 
+   You should be able to run your solver by:
+   
+      python DPLLsat.py -i <inputCNFfile> 
+   or
+
+      python DPLLsat.py -i <inputCNFfile> -v 
+   if you want to see the solution.
+   
+   
+   
+   Finally, summarize the command
+   Generate a sudoku instance by:
+   
+      python sudoku.py -n N
+   Use your SAT solver to solve the problem:
+   
+      python DPLLsat.py -i N.cnf 
+   where N is a positive number.
