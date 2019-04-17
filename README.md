@@ -3,7 +3,8 @@
 The goal of the game is to place N copies of numbers 1 thru N on this board satisfying the following 
 constraints in conjunction with constraints stemming from numbers already placed on the board, e.g., cell (1,1) contains 5.
 
-Part1 - Create CNF file 
+Part1 - Create CNF file by editting Sudoku.py
+
 Ex
 Here is the CNF file that corresponds to the simple formula discussed above:
 
@@ -21,7 +22,7 @@ Here is the CNF file that corresponds to the simple formula discussed above:
           i.e., there are no duplicate copies of a number in a column
           
  
- Part 2 - DPLL SAT Solver
+ Part 2 - DPLL SAT Solver by editting DPLLsolver.py
  
     1. Unit Propagation
         #Pseudo code
